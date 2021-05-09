@@ -3,5 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-  printf("hello world\n");
+  dynarray(int) d = dynarray_init(int);
+  d[0] = 1;
+  d[1] = 2;
+  printf("%d\n", dyn_info(d).size);
 }
