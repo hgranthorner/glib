@@ -19,5 +19,5 @@ int main(int argc, char *argv[])
   printf("%d\n", d[14]);
   printf("%d\n", info->len);
   printf("%d\n", info->size);
-    printf("(dyn_info(d))rmation: len: %d, size: %d, el_size: %d\n", (dyn_info(d))->len, (dyn_info(d))->size, (dyn_info(d))->el_size);
+    printf("Information: len: %d, size: %d, el_size: %d\n", (dyn_info(d))->len, (dyn_info(d))->size, (dyn_info(d))->el_size);
 }

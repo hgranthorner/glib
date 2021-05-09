@@ -13,15 +13,15 @@
 
 #define dyn_info(d)  &((dynarray_info *) d)[-1]
 
-#define dyn_add(d, arg) { \
+#define dyn_add(d, arg) ({ \
   dynarray_info *info = dyn_info(d); \
   d[info->len] = arg; \
   info->len += 1; \
   if (info->len == info->size) { \
     info->size = info->size * 2; \
     dynarray_info *info_ptr = (dynarray_info *) realloc(info->ptr, sizeof(dynarray_info) + info->el_size * info->size); \
-    d = info_ptr[1]; \
-  }}
+    info_ptr[1]; \
+  }})
 
 typedef struct 
 {
